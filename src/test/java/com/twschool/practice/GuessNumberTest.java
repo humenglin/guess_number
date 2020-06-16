@@ -42,7 +42,11 @@ public class GuessNumberTest {
 
     @Test
     public void should_return_0A4B_when_answer_given_user_answer_and_game_answer_has_four_same_words_but_different_positions() {
+        String userAnswer = "3 4 1 2";
 
+        String gameResult = guessNumber.answer(userAnswer);
+
+        assertEquals("0A4B", gameResult);
     }
 
     @Test
