@@ -52,20 +52,6 @@ public class GuessNumber {
     }
 
     public boolean check(String userAnswer) {
-        int answerLength = userAnswer.replace(" ", "").length();
-
-        if (answerLength != 4) {
-            return false;
-        }
-
-        String[] userAnswers= userAnswer.split(" ");
-        Set<String> set = new HashSet<>();
-        Collections.addAll(set, userAnswers);
-
-        if (set.size() != 4) {
-            return false;
-        }
-
-        return true;
+        return userAnswer.replace(" ", "").matches("(?!\\d*(\\d)\\d*\\1\\d*)\\d{4}");
     }
 }
