@@ -8,9 +8,6 @@ public class GuessNumber {
     }
 
     public String answer(String userAnswer) {
-        if (gameAnswer.equals(userAnswer)) {
-            return "4A0B";
-        }
         String[] gameAnswers = gameAnswer.split(" ");
         String[] userAnswers = userAnswer.split(" ");
 
