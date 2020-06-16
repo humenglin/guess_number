@@ -103,4 +103,14 @@ public class GuessNumberTest {
 
         assertFalse(checkFlag);
     }
+
+    @Test
+    public void should_return_false_when_check_userAnswer_given_a_userAnswer_has_word_less_than_0() {
+        String userAnswer = "-1 5 0 1";
+        GuessNumber guessNumber = new GuessNumber();
+
+        boolean checkFlag = guessNumber.check(userAnswer);
+
+        assertFalse(checkFlag);
+    }
 }
