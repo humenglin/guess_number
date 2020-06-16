@@ -60,6 +60,10 @@ public class GuessNumberTest {
 
     @Test
     public void should_return_0A0B_when_answer_given_user_answer_and_game_answer_has_different_words_and_different_positions() {
+        String userAnswer = "7 5 0 9";
 
+        String gameResult = guessNumber.answer(userAnswer);
+
+        assertEquals("0A0B", gameResult);
     }
 }
