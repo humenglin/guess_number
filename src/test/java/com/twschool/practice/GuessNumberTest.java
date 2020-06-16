@@ -1,10 +1,8 @@
 package com.twschool.practice;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GuessNumberTest {
 
@@ -84,5 +82,15 @@ public class GuessNumberTest {
         boolean checkFlag = guessNumber.check(userAnswer);
 
         assertTrue(checkFlag);
+    }
+
+    @Test
+    public void should_return_false_when_check_userAnswer_given_a_userAnswer_has_no_enough_words() {
+        String userAnswer = "7 5 0";
+        GuessNumber guessNumber = new GuessNumber();
+
+        boolean checkFlag = guessNumber.check(userAnswer);
+
+        assertFalse(checkFlag);
     }
 }
