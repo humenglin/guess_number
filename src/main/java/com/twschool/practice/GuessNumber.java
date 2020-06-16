@@ -51,7 +51,7 @@ public class GuessNumber {
     }
 
     public boolean check(String userAnswer) {
-        int answerLength = userAnswer.split(" ").length;
+        int answerLength = userAnswer.replace(" ", "").length();
         if (answerLength != 4) {
             return false;
         }
