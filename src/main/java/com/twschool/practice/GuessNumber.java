@@ -1,5 +1,7 @@
 package com.twschool.practice;
 
+import com.twschool.practice.enumeration.GuessNumberOutputEnum;
+
 public class GuessNumber {
     private String gameAnswer;
 
@@ -25,6 +27,7 @@ public class GuessNumber {
                 }
             }
         }
-        return samePositionsCount + "A" + sameWordsCount + "B";
+        return samePositionsCount + GuessNumberOutputEnum.same_word_and_same_position.getValue()
+                + sameWordsCount + GuessNumberOutputEnum.same_word_but_different_position.getValue();
     }
 }
