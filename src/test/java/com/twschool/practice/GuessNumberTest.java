@@ -51,7 +51,11 @@ public class GuessNumberTest {
 
     @Test
     public void should_return_0A3B_when_answer_given_user_answer_and_game_answer_has_partly_same_words_and_partly_same_positions() {
+        String userAnswer = "3 4 5 2";
 
+        String gameResult = guessNumber.answer(userAnswer);
+
+        assertEquals("0A3B", gameResult);
     }
 
     @Test
