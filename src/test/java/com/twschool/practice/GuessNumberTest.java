@@ -24,7 +24,11 @@ public class GuessNumberTest {
 
     @Test
     public void should_return_2A2B_when_answer_given_user_answer_and_game_answer_has_four_same_words_but_partly_same_positions() {
+        String userAnswer = "3 2 1 4";
 
+        String gameResult = guessNumber.answer(userAnswer);
+
+        assertEquals("2A2B", gameResult);
     }
 
     @Test
