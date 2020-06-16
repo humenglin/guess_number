@@ -49,4 +49,8 @@ public class GuessNumber {
         }
         return gameAnswer.replaceAll("(.{1})", "$1 ").trim();
     }
+
+    public boolean check(String userAnswer) {
+        return true;
+    }
 }

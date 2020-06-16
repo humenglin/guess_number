@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GuessNumberTest {
 
@@ -73,5 +74,15 @@ public class GuessNumberTest {
         String gameAnswer = guessNumber.generate();
 
         assertEquals(true, gameAnswer.replace(" ", "").matches("(?!\\d*(\\d)\\d*\\1\\d*)\\d{4}"));
+    }
+
+    @Test
+    public void should_return_true_when_check_userAnswer_given_a_correct_userAnswer() {
+        String userAnswer = "7 5 0 9";
+        GuessNumber guessNumber = new GuessNumber();
+
+        boolean checkFlag = guessNumber.check(userAnswer);
+
+        assertTrue(checkFlag);
     }
 }
