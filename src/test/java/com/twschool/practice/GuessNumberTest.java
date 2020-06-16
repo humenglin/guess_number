@@ -33,7 +33,11 @@ public class GuessNumberTest {
 
     @Test
     public void should_return_1A2B_when_answer_given_user_answer_and_game_answer_has_partly_same_words_and_partly_same_positions() {
+        String userAnswer = "3 2 1 5";
 
+        String gameResult = guessNumber.answer(userAnswer);
+
+        assertEquals("1A2B", gameResult);
     }
 
     @Test

@@ -11,6 +11,23 @@ public class GuessNumber {
         if (gameAnswer.equals(userAnswer)) {
             return "4A0B";
         }
-        return "2A2B";
+        String[] gameAnswers = gameAnswer.split(" ");
+        String[] userAnswers = userAnswer.split(" ");
+
+        int sameWordsCount = 0;
+        int samePositionsCount = 0;
+
+        for (int i = 0; i < gameAnswers.length; i++) {
+            for (int j = 0; j < userAnswers.length; j++) {
+                if (gameAnswers[i].equals(userAnswers[j])) {
+                    if (i == j) {
+                        samePositionsCount++;
+                    } else {
+                        sameWordsCount++;
+                    }
+                }
+            }
+        }
+        return samePositionsCount + "A" + sameWordsCount + "B";
     }
 }
